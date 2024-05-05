@@ -17,26 +17,28 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <header
-        className="wood-bg-2 pt-2 border-bottom border-dark border-4"
+      <section
+        className="wood-bg pt-2 border-bottom border-light border-5"
         style={{ height: "fit-content" }}
       >
         <div className="container py-5 text-center">
-          <div className="position-relative mx-auto d-block">
+          <div className="mx-auto">
             <Image
               src="/images/logo.png"
               width={150}
               height={150}
-              style={{ objectFit: "contain" }}
+              style={{ objectFit: "contain", filter: "saturate(60%)" }}
               alt="CH Floors Logo"
             />
           </div>
 
-          <h3 className="text-tertiary fw-semibold fs-6 pt-4">
+          <h3 className="text-quaternary fw-semibold fs-6 pt-4">
             TIMELESS ELEGANCE
           </h3>
 
-          <h3 className="text-tertiary fw-semibold fs-7">MEETS EXCEPTIONAL</h3>
+          <h3 className="text-quaternary  fw-semibold fs-7">
+            MEETS EXCEPTIONAL
+          </h3>
 
           <h3 className="fw-semibold fs-3 pb-4">CRAFTSMANSHIP</h3>
 
@@ -44,8 +46,11 @@ export default function Home() {
             Our Services
           </Link>
 
-          <Link href="/contact" className="btn btn-tertiary m-2">
-            Contact Us
+          <Link
+            href="/contact"
+            className="btn btn-danger m-2 fw-bold jumping text-black"
+          >
+            Get Free Quote
           </Link>
 
           <div className="py-4">
@@ -68,10 +73,10 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </header>
+      </section>
 
       <main>
-        <section className="container-fluid bg-light py-5 text-center">
+        <section className="container-fluid py-5 text-center">
           <div className="row">
             <div className="col-12 col-sm-6 d-none d-sm-block my-auto">
               <Image
@@ -84,7 +89,7 @@ export default function Home() {
 
             <div className="col-12 col-sm-6">
               <h1 className="text-primary text-sm-left">
-                About Us <span className=" fw-bold">|</span>
+                About Us <span className="text-tertiary fw-bold">|</span>
               </h1>
 
               <p className="text-sm-left px-3">
@@ -100,14 +105,14 @@ export default function Home() {
 
               <div className="d-sm-none my-5">
                 <Image
-                  src="/images/paint.jpg"
-                  alt="Paint Bucket"
+                  src="/images/side-mobile-showroom.jpeg"
+                  alt="Side view of the mobile showroom van."
                   width={300}
                   height={300}
                   style={{ objectFit: "cover" }}
                 />
               </div>
-              <div className="border border-4 border-dark mx-3">
+              <div className="border border-4 border-secondary mx-3">
                 <h2 className="py-3 fs-6 text-primary text-center">
                   Our Promise to You
                 </h2>
@@ -133,23 +138,35 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container-fluid wood-bg text-center py-5">
+        <section className="container-fluid wood-bg-2 text-center py-5 border-top border-bottom border-5 border-light">
           <div className="row">
-            <h3 className="text-light text-center px-3 fs-6">
+            <h3 className=" text-center px-3 fs-6 fw-medium">
               LET US TAKE CARE OF YOUR NEEDS, SO YOU CAN FOCUS ON WHAT IS
               IMPORTANT
             </h3>
 
-            <Link href="/gallery" className="btn btn-tertiary mx-auto my-3">
-              View Our Work
-            </Link>
+            <div className="mx-auto mt-3">
+              <Link
+                href="https://g.page/r/Cbs6GDoU0NDIEB0/review"
+                className="btn btn-tertiary me-3"
+              >
+                Reviews
+              </Link>
+
+              <Link
+                href="/contact"
+                className="btn btn-danger fw-bold jumping text-black"
+              >
+                Get Free Quote
+              </Link>
+            </div>
           </div>
         </section>
 
-        <section className="bg-light py-5">
+        <section className="py-5">
           <div className="container text-center px-3">
             <h2 className="fs-1 text-primary p-3 p-sm-5 fs-4">
-              Our Story <span className="text-secondary fw-bold">|</span>
+              Our Story <span className="text-tertiary fw-bold">|</span>
             </h2>
 
             <p>

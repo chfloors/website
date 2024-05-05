@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import ServiceList from "../ui/service-list";
 import { PageHeading } from "../ui/page-heading";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Services | CH Floors",
@@ -39,7 +40,7 @@ export default function Services() {
       },
       name: "Cleaning",
       description:
-        "Cleaning of commercial, residential, and construction sites",
+        "Any type of cleaning of commercial, residential, and construction sites",
       link: "/services/cleaning",
     },
     {
@@ -76,10 +77,27 @@ export default function Services() {
           <div className="row gy-5 justify-content-center mt-3">
             <ServiceList services={services} />
           </div>
+
+          <Link
+            href="/gallery"
+            className="btn btn-tertiary mx-auto d-block mt-5 text-black"
+          >
+            See Work Gallery
+          </Link>
+
+          <Link
+            href="/contact"
+            className="btn btn-danger mx-auto d-block mt-5 fw-bold jumping text-black"
+          >
+            Get Free Quote
+          </Link>
         </section>
 
         <section className="container-fluid my-5">
-          <h2 className="fs-5">Description of Services</h2>
+          <h2 className="fs-4 text-center">
+            Description of Services{" "}
+            <span className="text-tertiary fw-bold">|</span>
+          </h2>
 
           <p>
             Transform your home with our expert flooring installation and
@@ -91,9 +109,11 @@ export default function Services() {
             exceptional results with meticulous attention to detail.
           </p>
 
-          <h2 className="fs-5">We offer a wide range of services including:</h2>
+          <h2 className="fs-5 mt-5 mb-4">
+            We offer a wide range of services including:
+          </h2>
 
-          <h3 className="fs-6">Installation:</h3>
+          <h3 className="fs-5 fw-lighter">Installation:</h3>
 
           <ul>
             <li>
@@ -130,7 +150,7 @@ export default function Services() {
             </li>
           </ul>
 
-          <h3 className="fs-6">Sanding, Staining & Finishing:</h3>
+          <h3 className="fs-5 mt-5">Sand, Stain & Finish:</h3>
           <p>
             Revitalize your existing hardwood floors, stairs, and railings with
             our professional sanding, staining, and finishing services. We use
@@ -139,21 +159,24 @@ export default function Services() {
             desired style.
           </p>
 
-          <h3 className="fs-6">Repairs:</h3>
+          <h3 className="fs-5 mt-5">Repairs:</h3>
           <p>
             Do not let damaged floors detract from the beauty of your home. We
             offer comprehensive repair solutions for all types of flooring,
             restoring its functionality and appearance.
           </p>
 
-          <h3 className="fs-6">House Cleaning:</h3>
+          <h3 className="fs-5 mt-5">House Cleaning:</h3>
           <p>
             Enjoy a sparkling clean home with our professional house cleaning
             services. We provide thorough and efficient cleaning, leaving your
             space fresh and inviting.
           </p>
 
-          <h2 className="fs-5">Your Project in Expert Hands</h2>
+          <h2 className="fs-5 text-center mt-5">
+            Your Project is in Expert Hands{" "}
+            <span className="text-tertiary fw-bold">|</span>
+          </h2>
 
           <p>
             With over 15 years of experience, our team possesses the knowledge
@@ -163,7 +186,7 @@ export default function Services() {
             the highest standards.
           </p>
 
-          <h3 className="fs-6">Benefits of Choosing Us:</h3>
+          <h3 className="fs-6 mt-5">Benefits of Choosing Us:</h3>
 
           <ul>
             <li>

@@ -7,6 +7,7 @@ import { EmailLink } from "../ui/email-link";
 import PhoneIcon from "../ui/phone-icon";
 import EmailIcon from "../ui/email-icon";
 import { SmsLink } from "../ui/sms-link";
+import ReviewIcon from "../ui/review-icon";
 
 export const metadata: Metadata = {
   title: "Contact Us | CH Floors",
@@ -25,7 +26,6 @@ export default function Contact() {
   const pages: PageType[] = [
     { name: "Book a Visit", link: "/visit" },
     { name: "Message Us", link: "/message" },
-    { name: "Get a Quote", link: "/quote" },
   ];
 
   return (
@@ -40,14 +40,21 @@ export default function Contact() {
           {pages.map((page) => (
             <Link
               href={page.link}
-              className="btn btn-tertiary d-block fs-5 mx-auto my-3"
+              className="btn btn-tertiary d-block mx-auto my-3"
               key={page.link}
             >
               {page.name}
             </Link>
           ))}
 
-          <h2 className="fs-7 text-primary mt-5 pt-4 mb-4 text-center">
+          <Link
+            href="/quote"
+            className="btn btn-danger fw-bold jumping text-black d-block mx-auto my-4"
+          >
+            Free Quote
+          </Link>
+
+          <h2 className="fs-7 text-primary mt-4 pt-4 mb-4 text-center">
             Additional Questions?
           </h2>
 
@@ -74,10 +81,20 @@ export default function Contact() {
               <p>{EMAIL}</p>
             </div>
           </EmailLink>
+
+          <Link href="https://g.page/r/Cbs6GDoU0NDIEB0/review">
+            <div className="contact-box">
+              <ReviewIcon className="fs-1 mx-3" />
+
+              <p>Reviews</p>
+            </div>
+          </Link>
         </section>
 
         <section className="container my-5">
-          <h2 className="fs-5">Contacting Us</h2>
+          <h2 className="fs-4 text-center mt-5">
+            Contacting Us <span className="text-tertiary fw-bold">|</span>
+          </h2>
 
           <p>
             CH Floors is dedicated to making your dream floors a reality, and we
@@ -86,7 +103,7 @@ export default function Contact() {
             flooring needs.
           </p>
 
-          <h2 className="fs-5">How to Get Started</h2>
+          <h2 className="fs-5 mt-5">How to Get Started</h2>
 
           <ul>
             <li>
@@ -143,7 +160,10 @@ export default function Contact() {
             </li>
           </ul>
 
-          <h2 className="fs-5">Why Choose CH Floors?</h2>
+          <h2 className="fs-5">
+            Why Choose CH Floors?{" "}
+            <span className="text-tertiary fw-bold">|</span>
+          </h2>
 
           <ul>
             <li>
